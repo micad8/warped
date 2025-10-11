@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Time Sphere – Netal</title>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="icon" href="favicon.png" type="image/png"> <!-- Update this path if needed -->
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+        var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Time Sphere.json", {onProgress: UnityProgress});
+    </script>
+    <style>
+        /* Ensure the body and html cover the full viewport */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        .webgl-content {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        #unityContainer {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+            background-color: black; /* Optional: Set a background color */
+        }
+    </style>
+</head>
+<body style="background-color:#f4f4f4;color:#000000;">
+    <div class="webgl-content">
+        <div id="unityContainer"></div>
+        <div class="footer">
+            <!-- Fullscreen button removed -->
+        </div>
+    </div>
+</body>
+</html>
